@@ -4,6 +4,7 @@
   <bpmn2:itemDefinition id="_projectSetupItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_kieVersionItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_kjarSettingsItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_mavenSettingsItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__2A751D9F-D0AC-4808-83F6-FAB5BC872B16_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__2A751D9F-D0AC-4808-83F6-FAB5BC872B16_ArchiveInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__2A751D9F-D0AC-4808-83F6-FAB5BC872B16_SourcePathInputXItem" structureRef="String"/>
@@ -29,7 +30,8 @@
     <bpmn2:property id="project" itemSubjectRef="_projectItem"/>
     <bpmn2:property id="kieVersion" itemSubjectRef="_kieVersionItem"/>
     <bpmn2:property id="projectSetup" itemSubjectRef="_projectSetupItem"/>
-    <bpmn2:property id="kjarSettings" itemSubjectRef="_kjarSettingsItem"/>    
+    <bpmn2:property id="kjarSettings" itemSubjectRef="_kjarSettingsItem"/>
+    <bpmn2:property id="mavenSettings" itemSubjectRef="_mavenSettingsItem"/>    
     <bpmn2:startEvent id="_536E5A00-30FE-4968-9DA5-DE90071134A5" name="">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
@@ -163,7 +165,7 @@
       <bpmn2:dataInputAssociation id="_AX0j-Jo2Eeiiub0BzOE7Hw">
         <bpmn2:targetRef>_74147614-FCB8-45A6-A240-4B3DA225F5B7_CLOptionsInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_AX0j-Zo2Eeiiub0BzOE7Hw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AX0j-po2Eeiiub0BzOE7Hw"><![CDATA[-o -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-service-spring-boot-archetype -DarchetypeVersion=#{kieVersion} -DgroupId=#{project.getPackageName()} -DartifactId=#{project.getName()}-service -Dversion=1.0-SNAPSHOT -Dpackage=#{project.getPackageName()}.service -DappType=#{projectSetup} -DkieVersion=#{project.getVersion()} #{kjarSettings} -DarchetypeCatalog=local -q]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AX0j-po2Eeiiub0BzOE7Hw"><![CDATA[-o -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-service-spring-boot-archetype -DarchetypeVersion=#{kieVersion} -DgroupId=#{project.getPackageName()} -DartifactId=#{project.getName()}-service -Dversion=1.0-SNAPSHOT -Dpackage=#{project.getPackageName()}.service -DappType=#{projectSetup} -DkieVersion=#{project.getVersion()} #{kjarSettings} -DarchetypeCatalog=local -q #{mavenSettings}]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_AX0j-5o2Eeiiub0BzOE7Hw">_74147614-FCB8-45A6-A240-4B3DA225F5B7_CLOptionsInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
@@ -231,7 +233,7 @@
       <bpmn2:dataInputAssociation id="_AX0kE5o2Eeiiub0BzOE7Hw">
         <bpmn2:targetRef>_02EC1017-6991-4AA1-893B-A19DA5B4ABB1_CLOptionsInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_AX0kFJo2Eeiiub0BzOE7Hw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AX0kFZo2Eeiiub0BzOE7Hw"><![CDATA[-o -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-model-archetype -DarchetypeVersion=#{kieVersion} -DgroupId=#{project.getPackageName()} -DartifactId=#{project.getName()}-model -Dversion=1.0-SNAPSHOT -Dpackage=#{project.getPackageName()}.model -DarchetypeCatalog=local -q]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AX0kFZo2Eeiiub0BzOE7Hw"><![CDATA[-o -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-model-archetype -DarchetypeVersion=#{kieVersion} -DgroupId=#{project.getPackageName()} -DartifactId=#{project.getName()}-model -Dversion=1.0-SNAPSHOT -Dpackage=#{project.getPackageName()}.model -DarchetypeCatalog=local -q #{mavenSettings}]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_AX0kFpo2Eeiiub0BzOE7Hw">_02EC1017-6991-4AA1-893B-A19DA5B4ABB1_CLOptionsInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
@@ -299,7 +301,7 @@
       <bpmn2:dataInputAssociation id="_AX0kLpo2Eeiiub0BzOE7Hw">
         <bpmn2:targetRef>_0DE7E4ED-BC93-4B9A-9837-F7DF26ADE6B1_CLOptionsInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_AX0kL5o2Eeiiub0BzOE7Hw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AX0kMJo2Eeiiub0BzOE7Hw"><![CDATA[-o -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-kjar-archetype -DarchetypeVersion=#{kieVersion} -DgroupId=#{project.getPackageName()} -DartifactId=#{project.getName()}-kjar -Dversion=1.0-SNAPSHOT -Dpackage=#{project.getPackageName()} -DkieVersion=#{project.getVersion()} -DarchetypeCatalog=local -q]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AX0kMJo2Eeiiub0BzOE7Hw"><![CDATA[-o -B -DarchetypeGroupId=org.kie -DarchetypeArtifactId=kie-kjar-archetype -DarchetypeVersion=#{kieVersion} -DgroupId=#{project.getPackageName()} -DartifactId=#{project.getName()}-kjar -Dversion=1.0-SNAPSHOT -Dpackage=#{project.getPackageName()} -DkieVersion=#{project.getVersion()} -DarchetypeCatalog=local -q #{mavenSettings}]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_AX0kMZo2Eeiiub0BzOE7Hw">_0DE7E4ED-BC93-4B9A-9837-F7DF26ADE6B1_CLOptionsInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
