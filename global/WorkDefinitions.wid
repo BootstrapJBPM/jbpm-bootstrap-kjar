@@ -89,6 +89,18 @@
      ],
      "displayName" : "Zip",
      "icon" : "defaultservicenodeicon.png"
-   ]
+   ],
+  
+  [
+    "name" : "async",
+    "parameters" : [
+         "CommandClass" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "async",
+    "icon" : "defaultservicenodeicon.png"
+  ]
 
 ]
