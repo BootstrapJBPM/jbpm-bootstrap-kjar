@@ -7,6 +7,7 @@
   <bpmn2:itemDefinition id="_mavenSettingsItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_projectVersionItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_projectOptionsItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_generationTypeItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__0DE7E4ED-BC93-4B9A-9837-F7DF26ADE6B1_CommandClassInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__0DE7E4ED-BC93-4B9A-9837-F7DF26ADE6B1_GoalsInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__0DE7E4ED-BC93-4B9A-9837-F7DF26ADE6B1_ProjectRootInputXItem" structureRef="String"/>
@@ -38,6 +39,7 @@
     <bpmn2:property id="mavenSettings" itemSubjectRef="_mavenSettingsItem" name="mavenSettings"/>
     <bpmn2:property id="projectVersion" itemSubjectRef="_projectVersionItem" name="projectVersion"/>
     <bpmn2:property id="projectOptions" itemSubjectRef="_projectOptionsItem" name="projectOptions"/>
+    <bpmn2:property id="generationType" itemSubjectRef="_generationTypeItem" name="generationType"/>
     <bpmn2:sequenceFlow id="_23800818-B7FE-409C-AB8F-AF8665497743" sourceRef="_02EC1017-6991-4AA1-893B-A19DA5B4ABB1" targetRef="_7A5BDAD9-59BB-4E4F-8FBD-8545FB27C841">
       <bpmn2:documentation id="_2QPiMtukEeiy9708vSlB3w"><![CDATA[]]></bpmn2:documentation>
     </bpmn2:sequenceFlow>
