@@ -10,11 +10,11 @@
   <packaging>kjar</packaging>
   <name>bootstrap-jbpm</name>
   <description>Processes responsible for generating business applications</description>
-  
+
   <properties>
-    <kie.version>7.17.0.Final</kie.version>
+    <kie.version>7.18.0.Final</kie.version>
   </properties>
-  
+
   <dependencies>
     <dependency>
       <groupId>org.jbpm.start</groupId>
@@ -23,7 +23,7 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-  
+
   <build>
     <plugins>
       <plugin>
@@ -535,5 +535,5 @@
       </build>
     </profile>
   </profiles>
-  
+
 </project>
