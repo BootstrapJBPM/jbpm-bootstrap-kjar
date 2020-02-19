@@ -12,7 +12,7 @@
   <description>Processes responsible for generating business applications</description>
 
   <properties>
-    <kie.version>7.31.0.Final</kie.version>
+    <kie.version>7.33.0.Final</kie.version>
   </properties>
 
   <dependencies>
